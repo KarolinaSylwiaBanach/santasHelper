@@ -13,7 +13,6 @@ const handleError = (err, req, res, next) => {
             return;
         }*/
     console.error(err);
-
     res
         .status(err instanceof ValidationError ? 400 : 500)
         .render('error', {
@@ -21,7 +20,7 @@ const handleError = (err, req, res, next) => {
         });
 
 
-}
+};
 
 module.exports = {
     handleError,
